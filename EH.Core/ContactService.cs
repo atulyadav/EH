@@ -27,7 +27,7 @@ namespace EH.Core
 
         public bool Exist(int key)
         {
-            return this.contactRepository.Exist(key);
+            return this.contactRepository.Exists(key);
         }
 
         public Contact Find(int key)

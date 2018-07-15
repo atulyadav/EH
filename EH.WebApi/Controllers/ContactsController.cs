@@ -20,8 +20,7 @@
         [EnableQuery]
         public HttpResponseMessage GetContacts()
         {
-            var list = this.contactService.GetAll();
-            return Request.CreateResponse(HttpStatusCode.OK, list);
+            return Request.CreateResponse(HttpStatusCode.OK, this.contactService.GetAll());
         }
 
         [HttpPost]
@@ -44,9 +43,7 @@
                 return BadRequest(ModelState);
             }
 
-            var exist = this.contactService.Exist(key);
-
-            if (!exist)
+            if (!this.contactService.Exist(key))
             {
                 return NotFound();
             }

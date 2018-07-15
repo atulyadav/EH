@@ -12,7 +12,7 @@
         {
         }
 
-        public bool Exist(int key)
+        public bool Exists(int key)
         {
             return this.EHDataContext.Contacts.Any(c => c.Id == key);
         }

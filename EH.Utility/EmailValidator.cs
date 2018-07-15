@@ -4,8 +4,6 @@
 
     public class EmailValidator
     {
-        bool invalid = false;
-
         public static bool IsValidEmail(string strIn)
         {
             try
